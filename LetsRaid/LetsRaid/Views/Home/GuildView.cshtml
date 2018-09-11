@@ -26,6 +26,9 @@
             @Html.DisplayFor(modelItem => item.Server.Name)
         </td>
         <td>
+            @Html.ActionLink(item.Name,"GetMembers","Character",new { model = item.GuildId })
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Name)
             @*@Html.ActionLink(item.Name, "Dalaran", "Home", new { Id = item.ServerId }, null)*@
         </td>

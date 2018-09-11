@@ -165,6 +165,7 @@
     <Compile Include="Clients\CharacterClient.cs" />
     <Compile Include="Controllers\CharacterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServersController.cs" />
     <Compile Include="DAL\LetsraidContext.cs" />
     <Compile Include="DAL\LetsraidInitializer.cs" />
     <Compile Include="DAL\Maps\GuildMap.cs" />
@@ -229,6 +230,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Servers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,5 +1,6 @@
 ﻿using LetsRaid.Clients;
 using LetsRaid.Models;
+using LetsRaid.Models.GuildModels;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -23,10 +24,11 @@ namespace LetsRaid.Controllers
             return View(player);
         }
 
-        public async Task<ActionResult> GetMembers()
+        [HttpPost]
+        public async Task<ActionResult> GetMembers(Guild model)
         {
             ViewBag.Thumbnail = ConfigurationManager.AppSettings["ThumbnailEndpoint"];
-            var members = await _characterClient.GetMembers();
+            var members = await _characterClient.GetMembers(model.Server.Name, model.Name);
             return View(members);
         }
 
