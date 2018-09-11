@@ -46,7 +46,7 @@ namespace LetsRaid.Controllers
 
         public ActionResult Dalaran(int? Id)
         {
-            ViewBag.Title = db.Servers.Find(Id).Name.ToString();
+            //ViewBag.Title = db.Servers.Find(Id).Name.ToString();
             var guilds = db.Guilds.Where(x => x.ServerId == Id);
             return View(guilds);
         }
